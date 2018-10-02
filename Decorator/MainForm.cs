@@ -27,7 +27,13 @@ namespace Decorator
 
         private void Mostrar()
         {
-            if (!radPizzaRegular.Checked && !radPizzaVegetariana.Checked)
+            //if (!radPizzaRegular.Checked && !radPizzaVegetariana.Checked)
+            //{
+            //    rtxtListadoIngredientes.Text = "Por favor, seleccionar tipo de pizza.";
+            //    return;
+            //}
+
+            if (!mradPizzaRegular.Checked && !mradPizzaVegetariana.Checked)
             {
                 rtxtListadoIngredientes.Text = "Por favor, seleccionar tipo de pizza.";
                 return;
@@ -104,7 +110,7 @@ namespace Decorator
 
         private void ActualizarIngredientes()
         {
-            foreach (CheckBox cbk in gbIngredientes.Controls)
+            foreach (MaterialCheckBox cbk in gbIngredientes.Controls)
             {
                 if (!cbk.Checked)
                     continue;
@@ -185,30 +191,31 @@ namespace Decorator
             }
         }
 
-        private void radPizzaRegular_CheckedChanged(object sender, EventArgs e)
+
+        private void mradPizzaRegular_CheckedChanged(object sender, EventArgs e)
         {
             // Borrar/Destruir objeto pizzaVegetariana.
             pizzaVegetariana = null;
 
             // Limpia todos los CheckBoxes del gbIngredientes.
-            foreach (CheckBox cbk in gbIngredientes.Controls)
+            foreach (MaterialCheckBox cbk in gbIngredientes.Controls)
                 cbk.Checked = false;
-            
+
             pizzaRegular = new ConcretePizzaRegular();
-            pbxPizza.Image = pizzaRegular.PintarImagen(); 
+            pbxPizza.Image = pizzaRegular.PintarImagen();
             tipoPizza = TipoPizza.Regular;
 
             gbIngredientes.Enabled = true;
             Mostrar();
         }
 
-        private void radPizzaVegetariana_CheckedChanged(object sender, EventArgs e)
+        private void mradPizzaVegetariana_CheckedChanged(object sender, EventArgs e)
         {
             // Borrar/Destruir objeto pizzaRegular.
             pizzaRegular = null;
 
             // Limpia todos los CheckBoxes del gbIngredientes.
-            foreach (CheckBox cbk in gbIngredientes.Controls)
+            foreach (MaterialCheckBox cbk in gbIngredientes.Controls)
                 cbk.Checked = false;
 
             pizzaVegetariana = new ConcretePizzaVegetariana();
@@ -219,18 +226,17 @@ namespace Decorator
             Mostrar();
         }
 
-        
-        private void btnFinalizar_Click(object sender, EventArgs e)
+        private void mrbtnComprar_Click(object sender, EventArgs e)
         {
             Mostrar();
         }
 
-        private void cbxPepperoni_CheckedChanged(object sender, EventArgs e)
+        private void mcbxPepperoni_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxPepperoni.Checked)
+                    if (mcbxPepperoni.Checked)
                     {
                         // Agregar pepperoni...
                         pizzaRegular = new Pepperoni<ConcretePizzaRegular>(pizzaRegular);
@@ -245,7 +251,7 @@ namespace Decorator
                     }
                     break;
                 case TipoPizza.Vegetariana:
-                    if (cbxPepperoni.Checked)
+                    if (mcbxPepperoni.Checked)
                     {
                         // Agregar pepperoni...
                         pizzaVegetariana = new Pepperoni<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -264,12 +270,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxJamon_CheckedChanged(object sender, EventArgs e)
+        private void mcbxJamon_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxJamon.Checked)
+                    if (mcbxJamon.Checked)
                     {
                         // Agregar jamon...
                         pizzaRegular = new Jamon<ConcretePizzaRegular>(pizzaRegular);
@@ -284,7 +290,7 @@ namespace Decorator
                     }
                     break;
                 case TipoPizza.Vegetariana:
-                    if (cbxJamon.Checked)
+                    if (mcbxJamon.Checked)
                     {
                         // Agregar jamon...
                         pizzaVegetariana = new Jamon<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -303,13 +309,13 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxTocino_CheckedChanged(object sender, EventArgs e)
+        private void mcbxTocino_CheckedChanged(object sender, EventArgs e)
         {
 
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxTocino.Checked)
+                    if (mcbxTocino.Checked)
                     {
                         // Agregar tocino...
                         pizzaRegular = new Tocino<ConcretePizzaRegular>(pizzaRegular);
@@ -325,7 +331,7 @@ namespace Decorator
                     break;
 
                 case TipoPizza.Vegetariana:
-                    if (cbxTocino.Checked)
+                    if (mcbxTocino.Checked)
                     {
                         // Agregar tocino...
                         pizzaVegetariana = new Tocino<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -343,13 +349,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxChileMorron_CheckedChanged(object sender, EventArgs e)
+        private void mcbxChileMorron_CheckedChanged(object sender, EventArgs e)
         {
-
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxChileMorron.Checked)
+                    if (mcbxChileMorron.Checked)
                     {
                         // Agregar chile morron...
                         pizzaRegular = new ChileMorron<ConcretePizzaRegular>(pizzaRegular);
@@ -365,7 +370,7 @@ namespace Decorator
                     break;
 
                 case TipoPizza.Vegetariana:
-                    if (cbxChileMorron.Checked)
+                    if (mcbxChileMorron.Checked)
                     {
                         // Agregar chile morron...
                         pizzaVegetariana = new ChileMorron<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -383,14 +388,14 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxJalapeño_CheckedChanged(object sender, EventArgs e)
+        private void mcbxJalapeno_CheckedChanged(object sender, EventArgs e)
         {
 
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
 
-                    if (cbxJalapeño.Checked)
+                    if (mcbxJalapeno.Checked)
                     {
                         // Agregar jalapeño...
                         pizzaRegular = new Jalapeño<ConcretePizzaRegular>(pizzaRegular);
@@ -406,7 +411,7 @@ namespace Decorator
                     break;
 
                 case TipoPizza.Vegetariana:
-                    if (cbxJalapeño.Checked)
+                    if (mcbxJalapeno.Checked)
                     {
                         // Agregar jalapeño...
                         pizzaVegetariana = new Jalapeño<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -426,12 +431,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxChampiñon_CheckedChanged(object sender, EventArgs e)
+        private void mcbxChampinon_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxChampiñon.Checked)
+                    if (mcbxChampinon.Checked)
                     {
                         // Agregar champiñon...
                         pizzaRegular = new Champiñon<ConcretePizzaRegular>(pizzaRegular);
@@ -446,7 +451,7 @@ namespace Decorator
                     }
                     break;
                 case TipoPizza.Vegetariana:
-                    if (cbxChampiñon.Checked)
+                    if (mcbxChampinon.Checked)
                     {
                         // Agregar champiñon...
                         pizzaVegetariana = new Champiñon<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -465,12 +470,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxCebolla_CheckedChanged(object sender, EventArgs e)
+        private void mcbxCebolla_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxCebolla.Checked)
+                    if (mcbxCebolla.Checked)
                     {
                         // Agregar cebolla...
                         pizzaRegular = new Cebolla<ConcretePizzaRegular>(pizzaRegular);
@@ -486,7 +491,7 @@ namespace Decorator
                     break;
 
                 case TipoPizza.Vegetariana:
-                    if (cbxCebolla.Checked)
+                    if (mcbxCebolla.Checked)
                     {
                         // Agregar cebolla...
                         pizzaVegetariana = new Cebolla<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -505,12 +510,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxTomate_CheckedChanged(object sender, EventArgs e)
+        private void mcbxTomate_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxTomate.Checked)
+                    if (mcbxTomate.Checked)
                     {
                         // Agregar tomate...
                         pizzaRegular = new Tomate<ConcretePizzaRegular>(pizzaRegular);
@@ -525,7 +530,7 @@ namespace Decorator
                     }
                     break;
                 case TipoPizza.Vegetariana:
-                    if (cbxTomate.Checked)
+                    if (mcbxTomate.Checked)
                     {
                         // Agregar tomate...
                         pizzaVegetariana = new Tomate<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -544,12 +549,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxAceituna_CheckedChanged(object sender, EventArgs e)
+        private void mcbxAceituna_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxAceituna.Checked)
+                    if (mcbxAceituna.Checked)
                     {
                         // Agregar aceituna...
                         pizzaRegular = new Aceituna<ConcretePizzaRegular>(pizzaRegular);
@@ -565,7 +570,7 @@ namespace Decorator
                     break;
 
                 case TipoPizza.Vegetariana:
-                    if (cbxAceituna.Checked)
+                    if (mcbxAceituna.Checked)
                     {
                         // Agregar aceituna...
                         pizzaVegetariana = new Aceituna<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -584,12 +589,12 @@ namespace Decorator
             Mostrar();
         }
 
-        private void cbxPiña_CheckedChanged(object sender, EventArgs e)
+        private void mcbxPina_CheckedChanged(object sender, EventArgs e)
         {
             switch (tipoPizza)
             {
                 case TipoPizza.Regular:
-                    if (cbxPiña.Checked)
+                    if (mcbxPina.Checked)
                     {
                         // Agregar piña...
                         pizzaRegular = new Piña<ConcretePizzaRegular>(pizzaRegular);
@@ -605,7 +610,7 @@ namespace Decorator
                     break;
 
                 case TipoPizza.Vegetariana:
-                    if (cbxPiña.Checked)
+                    if (mcbxPina.Checked)
                     {
                         // Agregar piña...
                         pizzaVegetariana = new Piña<ConcretePizzaVegetariana>(pizzaVegetariana);
@@ -624,5 +629,6 @@ namespace Decorator
 
             Mostrar();
         }
+
     }
 }
