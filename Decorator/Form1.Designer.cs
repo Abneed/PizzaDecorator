@@ -217,7 +217,7 @@
             this.gbIngredientes.Controls.Add(this.cbxChileMorron);
             this.gbIngredientes.Controls.Add(this.cbxChampiñon);
             this.gbIngredientes.Controls.Add(this.cbxJalapeño);
-            this.gbIngredientes.Location = new System.Drawing.Point(51, 100);
+            this.gbIngredientes.Location = new System.Drawing.Point(12, 100);
             this.gbIngredientes.Name = "gbIngredientes";
             this.gbIngredientes.Size = new System.Drawing.Size(200, 288);
             this.gbIngredientes.TabIndex = 14;
@@ -228,7 +228,7 @@
             // 
             this.gbTipoPizza.Controls.Add(this.radPizzaRegular);
             this.gbTipoPizza.Controls.Add(this.radPizzaVegetariana);
-            this.gbTipoPizza.Location = new System.Drawing.Point(45, 12);
+            this.gbTipoPizza.Location = new System.Drawing.Point(12, 12);
             this.gbTipoPizza.Name = "gbTipoPizza";
             this.gbTipoPizza.Size = new System.Drawing.Size(200, 72);
             this.gbTipoPizza.TabIndex = 15;
@@ -246,7 +246,7 @@
             // gbxListado
             // 
             this.gbxListado.Controls.Add(this.rtxtListadoIngredientes);
-            this.gbxListado.Location = new System.Drawing.Point(773, 12);
+            this.gbxListado.Location = new System.Drawing.Point(734, 12);
             this.gbxListado.Name = "gbxListado";
             this.gbxListado.Size = new System.Drawing.Size(199, 381);
             this.gbxListado.TabIndex = 17;
@@ -255,7 +255,7 @@
             // 
             // btnFinalizar
             // 
-            this.btnFinalizar.Location = new System.Drawing.Point(480, 426);
+            this.btnFinalizar.Location = new System.Drawing.Point(441, 426);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(75, 23);
             this.btnFinalizar.TabIndex = 18;
@@ -267,7 +267,7 @@
             // 
             this.pbxPizza.BackColor = System.Drawing.Color.White;
             this.pbxPizza.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxPizza.Location = new System.Drawing.Point(339, 60);
+            this.pbxPizza.Location = new System.Drawing.Point(300, 60);
             this.pbxPizza.Name = "pbxPizza";
             this.pbxPizza.Size = new System.Drawing.Size(354, 333);
             this.pbxPizza.TabIndex = 19;
@@ -276,7 +276,7 @@
             // pbxPepperoni
             // 
             this.pbxPepperoni.BackColor = System.Drawing.Color.Transparent;
-            this.pbxPepperoni.Location = new System.Drawing.Point(339, 60);
+            this.pbxPepperoni.Location = new System.Drawing.Point(300, 60);
             this.pbxPepperoni.Name = "pbxPepperoni";
             this.pbxPepperoni.Size = new System.Drawing.Size(354, 333);
             this.pbxPepperoni.TabIndex = 20;
@@ -285,7 +285,7 @@
             // pbxJamon
             // 
             this.pbxJamon.BackColor = System.Drawing.Color.Transparent;
-            this.pbxJamon.Location = new System.Drawing.Point(339, 60);
+            this.pbxJamon.Location = new System.Drawing.Point(300, 60);
             this.pbxJamon.Name = "pbxJamon";
             this.pbxJamon.Size = new System.Drawing.Size(354, 333);
             this.pbxJamon.TabIndex = 21;
@@ -294,7 +294,7 @@
             // pbxTocino
             // 
             this.pbxTocino.BackColor = System.Drawing.Color.Transparent;
-            this.pbxTocino.Location = new System.Drawing.Point(339, 60);
+            this.pbxTocino.Location = new System.Drawing.Point(300, 60);
             this.pbxTocino.Name = "pbxTocino";
             this.pbxTocino.Size = new System.Drawing.Size(354, 333);
             this.pbxTocino.TabIndex = 22;
@@ -303,7 +303,7 @@
             // pbxChile
             // 
             this.pbxChile.BackColor = System.Drawing.Color.Transparent;
-            this.pbxChile.Location = new System.Drawing.Point(339, 60);
+            this.pbxChile.Location = new System.Drawing.Point(300, 60);
             this.pbxChile.Name = "pbxChile";
             this.pbxChile.Size = new System.Drawing.Size(354, 333);
             this.pbxChile.TabIndex = 23;
@@ -312,7 +312,7 @@
             // pbxJalapeno
             // 
             this.pbxJalapeno.BackColor = System.Drawing.Color.Transparent;
-            this.pbxJalapeno.Location = new System.Drawing.Point(339, 60);
+            this.pbxJalapeno.Location = new System.Drawing.Point(300, 60);
             this.pbxJalapeno.Name = "pbxJalapeno";
             this.pbxJalapeno.Size = new System.Drawing.Size(354, 333);
             this.pbxJalapeno.TabIndex = 24;
@@ -321,7 +321,7 @@
             // pbxChampinon
             // 
             this.pbxChampinon.BackColor = System.Drawing.Color.Transparent;
-            this.pbxChampinon.Location = new System.Drawing.Point(339, 60);
+            this.pbxChampinon.Location = new System.Drawing.Point(300, 60);
             this.pbxChampinon.Name = "pbxChampinon";
             this.pbxChampinon.Size = new System.Drawing.Size(354, 333);
             this.pbxChampinon.TabIndex = 25;
@@ -330,7 +330,7 @@
             // pbxCebolla
             // 
             this.pbxCebolla.BackColor = System.Drawing.Color.Transparent;
-            this.pbxCebolla.Location = new System.Drawing.Point(339, 60);
+            this.pbxCebolla.Location = new System.Drawing.Point(300, 60);
             this.pbxCebolla.Name = "pbxCebolla";
             this.pbxCebolla.Size = new System.Drawing.Size(354, 333);
             this.pbxCebolla.TabIndex = 26;
@@ -339,7 +339,7 @@
             // pbxTomate
             // 
             this.pbxTomate.BackColor = System.Drawing.Color.Transparent;
-            this.pbxTomate.Location = new System.Drawing.Point(339, 60);
+            this.pbxTomate.Location = new System.Drawing.Point(300, 60);
             this.pbxTomate.Name = "pbxTomate";
             this.pbxTomate.Size = new System.Drawing.Size(354, 333);
             this.pbxTomate.TabIndex = 27;
@@ -348,7 +348,7 @@
             // pbxAceituna
             // 
             this.pbxAceituna.BackColor = System.Drawing.Color.Transparent;
-            this.pbxAceituna.Location = new System.Drawing.Point(339, 60);
+            this.pbxAceituna.Location = new System.Drawing.Point(300, 60);
             this.pbxAceituna.Name = "pbxAceituna";
             this.pbxAceituna.Size = new System.Drawing.Size(354, 333);
             this.pbxAceituna.TabIndex = 28;
@@ -357,7 +357,7 @@
             // pbxPina
             // 
             this.pbxPina.BackColor = System.Drawing.Color.Transparent;
-            this.pbxPina.Location = new System.Drawing.Point(339, 60);
+            this.pbxPina.Location = new System.Drawing.Point(300, 60);
             this.pbxPina.Name = "pbxPina";
             this.pbxPina.Size = new System.Drawing.Size(354, 333);
             this.pbxPina.TabIndex = 29;
@@ -367,7 +367,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(960, 462);
             this.Controls.Add(this.pbxPina);
             this.Controls.Add(this.pbxAceituna);
             this.Controls.Add(this.pbxTomate);
