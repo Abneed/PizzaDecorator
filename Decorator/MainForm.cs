@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ using Decorator.Ingredientes;
 
 namespace Decorator
 {
-    public partial class Form1 : Form
+    public partial class MainForm : MaterialForm
     {
         ComponentPizza pizzaRegular;
         ComponentPizza pizzaVegetariana;
@@ -48,7 +49,7 @@ namespace Decorator
             
         }
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
